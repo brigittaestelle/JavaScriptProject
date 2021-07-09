@@ -1,73 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Group - JavaScript Project - Buddget Buddy</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <header> 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src="images/budgie_budget.png" alt="budgie bird" width="150px"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="images/budgie_budget.png"
+              alt="budgie bird"
+              width="150px"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >DASHBOARD</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SETTINGS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ADD AN EXPENSE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" tabindex="-1" aria-disabled="false"
+                  >CATEGORY</a
+                >
+                <ul>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">DASHBOARD</a>
+                    <a class="nav-link" href="#">ENTERTAINMENT</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">SETTINGS</a>
+                    <a class="nav-link" href="#">BILLS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">ADD AN EXPENSE</a>
+                    <a class="nav-link" href="#">FOOD</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="false">CATEGORY</a>
-                    <ul>
-                        <li class="nav-item"><a class="nav-link" href="#">ENTERTAINMENT</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">BILLS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">FOOD</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">CLOTHING</a></li>
-                    </ul>
+                    <a class="nav-link" href="#">CLOTHING</a>
                   </li>
                 </ul>
-              </div>
-            </div>
-          </nav>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <div class="container">
-        <form>
-            <h1>REGISTRATION</h1>
-            <label for="fullname">FULL NAME</label>
-            <input type="text" name="fullname" placeholder="John Doe"id="fullname">
-            <label for="email">EMAIL</label>
-            <input type="text" name="email" placeholder="jdoe@gmail.com"id="email">
-            <label for="password">PASSWORD</label>
-            <input type="password" name="password" placeholder="*******"id="password">
-            <button type="submit">Become a BUDGIE</button>
-        </form>
+      <form class="form_style" id="frm_registration">
+        <h1>REGISTRATION</h1>
+        <label for="fullname">FULL NAME</label>
+        <input
+          type="text"
+          name="fullname"
+          placeholder="John Doe"
+          id="fullname"
+        />
+        <label for="email">EMAIL</label>
+        <input
+          type="text"
+          name="email"
+          placeholder="jdoe@gmail.com"
+          id="email"
+        />
+        <label for="password">PASSWORD</label>
+        <input
+          type="password"
+          name="password"
+          placeholder="*******"
+          id="password"
+        />
+        <button type="submit" id="btn_registration">Become a BUDGIE</button>
+      </form>
     </div>
     <footer>
-        <div class="footer_nav">
-            <p>DASHBOARD</p>
-            <p>SETTINGS</p>
-            <p>ADD AN EXPENSE</p>
-        </div>
-        <div class="footer_social">
-            <p><i class="fab fa-facebook"></i></p>
-            <p><i class="fab fa-twitter"></i></p>
-            <p><i class="fab fa-instagram"></i></p> 
-        </div>
+      <div class="footer_nav">
+        <p>DASHBOARD</p>
+        <p>SETTINGS</p>
+        <p>ADD AN EXPENSE</p>
+      </div>
+      <div class="footer_social">
+        <p><i class="fab fa-facebook"></i></p>
+        <p><i class="fab fa-twitter"></i></p>
+        <p><i class="fab fa-instagram"></i></p>
+      </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
