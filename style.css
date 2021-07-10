@@ -2,3 +2,33 @@ body,p,h1,h2,h3,form,label,input,button {
     margin: 0;
     padding: 0;
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer p {
+    margin-right: 1em;
+
+}
+footer p:last-child {
+    margin-right: 0;
+}
+.footer_nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer_social {
+    display: flex;
+    justify-content: space-evenly;
+}
