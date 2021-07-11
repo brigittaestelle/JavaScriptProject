@@ -42,3 +42,28 @@ footer p:last-child {
     display: flex;
     justify-content: space-evenly;
 }
+.list_purchases {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+.list_purchases_item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.list_purchases_item > p {
+    margin-right: 1em;
+}
+.list_purchases_item > p:last-of-type {
+    margin-right: 0em;
+}
+.list_purchases_total {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.list_purchases_total p {
+    font-weight: 700;
+    font-size: 1.5em
+}
