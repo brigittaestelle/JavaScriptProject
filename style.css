@@ -1,44 +1,51 @@
-body,p,h1,h2,h3,form,label,input,button {
-    margin: 0;
-    padding: 0;
+body,
+p,
+h1,
+h2,
+h3,
+form,
+label,
+input,
+button {
+  margin: 0;
+  padding: 0;
 }
 body {
-    position: relative;
-    min-height: 100%;
-    padding-bottom: 6rem;
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 6rem;
 }
 .container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 #navbarNav {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 form {
-    display: flex;
-    flex-direction: column;
-    
+  display: flex;
+  flex-direction: column;
 }
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: flex-end;
-    background-color: #f8f9fa;
-    padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-end;
+  background-color: #f8f9fa;
+  padding: 1em;
 }
 footer p {
-    margin-right: 1em;
-
+  margin-right: 1em;
 }
 footer p:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 .footer_nav {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 .footer_social {
+
     display: flex;
     justify-content: space-evenly;
 }
@@ -67,3 +74,33 @@ footer p:last-child {
     font-weight: 700;
     font-size: 1.5em
 }
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.FoodSquare {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgrey;
+  height: 250px;
+  width: 250px;
+  border: solid 10px #7f3f98;
+  margin: 10px;
+}
+
+.fas {
+  font-size: 180px;
+}
+a {
+  text-decoration: none !important;
+  color: green !important;
+}
+
