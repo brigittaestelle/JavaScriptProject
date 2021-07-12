@@ -79,8 +79,35 @@
       </nav>
     </header>
     <div class="container">
-      <h1>ADD EXPENSE</h1>
-      <form class="form_style"></form>
+      <form class="form_style">
+        <h1>ADD AN EXPENSE</h1>
+        <h4 class="input_questions">Where?</h4>
+        <input type="text" placeholder="Target, Walmart, etc.">
+
+        <h4 class="input_questions">What?</h4>
+        <section class="radio_buttons">
+          <input type="radio" id="input_entertainment" name="input_radio">
+          <label for="input_entertainment">Entertainment</label>
+        </section>
+        <section class="radio_buttons">
+          <input type="radio" id="input_food" name="input_radio">
+          <label for="input_food">Food</label>
+        </section>
+        <section class="radio_buttons">
+          <input type="radio" id="input_clothing" name="input_radio">
+          <label for="input_clothing">Clothing</label>
+        </section>
+        <section class="radio_buttons">
+          <input type="radio" id="input_bills" name="input_radio">
+          <label for="input_bills">Bills</label>
+        </section>
+        
+
+        <h4 class="input_questions">How much?</h4>
+        <input type="text" placeholder="amount spent here">
+
+        <button class ="add_expense_button"type="submit"> Save</button>
+      </form>
     </div>
     <footer>
       <div class="footer_nav">

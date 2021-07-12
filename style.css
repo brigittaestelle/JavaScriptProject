@@ -23,8 +23,26 @@ body {
   justify-content: flex-end;
 }
 form {
+
+    display: flex;
+    flex-direction: column;
+}
+.input_questions{
+    margin-bottom: 10px !important;
+    margin-top: 20px !important;
+}
+.radio_buttons {
+    flex-direction:row;
+}
+.add_expense_button {
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: green;
+    color: white;
+
   display: flex;
   flex-direction: column;
+
 }
 footer {
   display: flex;
