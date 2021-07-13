@@ -79,31 +79,108 @@
       </nav>
     </header>
     <div class="container">
-      <form class="form_style" id="frm_registration">
-        <h1>REGISTRATION</h1>
-        <label for="fullname">FULL NAME</label>
-        <input
-          type="text"
-          name="fullname"
-          placeholder="John Doe"
-          id="fullname"
-        />
-        <label for="email">EMAIL</label>
-        <input
-          type="text"
-          name="email"
-          placeholder="jdoe@gmail.com"
-          id="email"
-        />
-        <label for="password">PASSWORD</label>
-        <input
-          type="password"
-          name="password"
-          placeholder="*******"
-          id="password"
-        />
-        <button type="submit" id="btn_registration">Become a BUDGIE</button>
+      <form id="set_budget">
+        <h1>SETTINGS</h1>
+        <p>BILLS</p>
+        <label
+          >How much do you expect to spend per month on other bills (rent,
+          housing, utilities, car, phone)?</label
+        >
+        <input type="text" name="billsBudgetAmount" id="billsBudgetAmount" class="" placeholder="00.00" />
+        <p>FOOD</p>
+        <label
+          >Ideally, how much would you like to spend per month on food
+          (restaurants, groceries, eating out)?</label
+        >
+        <input type="text" name="foodBudgetAmount" id="foodBudgetAmount" class="" placeholder="00.00" />
+        <p>CLOTHING</p>
+        <label
+          >Ideally, how much would you like to spend per month on clothing and
+          other necessary items?</label
+        >
+        <input type="text" name="clothingBudgetAmount" id="clothingBudgetAmount" class="" placeholder="00.00" />
+        <p>ENTERTAINMENT</p>
+        <label
+          >Ideally, how much would you like to spend per month on streaming
+          services, movies, events, and other entertainment?</label
+        >
+        <input type="text" name="entertainmentBudgetAmount" id="entertainmentBudgetAmount" class="" placeholder="00.00" />
+        <input type="submit" value="Add Expense" id="add_expense">
       </form>
+      <!-- START ADD EXPENSES -->
+      <form class="form_style">
+        <h1>ADD AN EXPENSE</h1>
+        <h4 class="input_questions">Where?</h4>
+        <input type="text" placeholder="Target, Walmart, etc.">
+
+        <h4 class="input_questions">What?</h4>
+        <section class="radio_buttons">
+          <input type="radio" id="input_entertainment" name="input_radio">
+          <label for="input_entertainment">Entertainment</label>
+        </section>
+        <section class="radio_buttons">
+          <input type="radio" id="input_food" name="input_radio">
+          <label for="input_food">Food</label>
+        </section>
+        <section class="radio_buttons">
+          <input type="radio" id="input_clothing" name="input_radio">
+          <label for="input_clothing">Clothing</label>
+        </section>
+        <section class="radio_buttons">
+          <input type="radio" id="input_bills" name="input_radio">
+          <label for="input_bills">Bills</label>
+        </section>
+        
+
+        <h4 class="input_questions">How much?</h4>
+        <input type="text" placeholder="amount spent here">
+
+        <button class ="add_expense_button"type="submit"> Save</button>
+      </form>
+      <!--START THE DASHBOARD -->
+      <h1>DASHBOARD</h1>
+    
+    <button>Enter New Purchase</button>
+    <section class="boxes">
+      <h1>Total Budget $<span id="totalBudget">0.00</span></h1>
+      <div class="FoodSquare">
+        <p>
+            <span><i class="fas fa-hamburger"></i></span>
+            <p>FOOD $<span id="foodBudget">0.00</span></p>
+            <div class="expense_display">
+              <p>McDonalds</p>
+              <p>$5.78</p>
+            </div>
+        </p>
+
+      </div>
+      <div class="FoodSquare">
+        <p>
+          <a href="clothing.html">
+            <span><i class="fas fa-tshirt"></i></span>
+            <p>CLOTHING $<span id="clothingBudget">0.00</span></p>
+          </a>
+        </p>
+      </div>
+
+      <div class="FoodSquare">
+        <p>
+          <a href="entertainment.html">
+            <span><i class="fas fa-ticket-alt"></i></span>
+            <p>ENTERTAINMENT $<span id="entertainmentBudget">0.00</span></p>
+          </a>
+        </p>
+      </div>
+
+      <div class="FoodSquare">
+        <p class="Bills_style">
+          <a href="bills.html">
+            <span><i class="fas fa-home"></i></span>
+            <p>BILLS $<span id="billsBudget">0.00</span></p>
+          </a>
+        </p>
+      </div>
+    </section>
     </div>
     <footer>
       <div class="footer_nav">

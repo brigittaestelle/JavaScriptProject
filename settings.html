@@ -91,32 +91,33 @@
       </nav>
     </header>
     <div class="container">
-      <form>
+      <form id="set_budget">
         <h1>SETTINGS</h1>
         <p>BILLS</p>
         <label
           >How much do you expect to spend per month on other bills (rent,
           housing, utilities, car, phone)?</label
         >
-        <input placeholder="00.00" />
+        <input type="text" name="billsBudgetAmount" id="billsBudgetAmount" class="" placeholder="00.00" />
         <p>FOOD</p>
         <label
           >Ideally, how much would you like to spend per month on food
           (restaurants, groceries, eating out)?</label
         >
-        <input placeholder="00.00" />
+        <input type="text" name="foodBudgetAmount" id="foodBudgetAmount" class="" placeholder="00.00" />
         <p>CLOTHING</p>
         <label
           >Ideally, how much would you like to spend per month on clothing and
           other necessary items?</label
         >
-        <input placeholder="00.00" />
+        <input type="text" name="clothingBudgetAmount" id="clothingBudgetAmount" class="" placeholder="00.00" />
         <p>ENTERTAINMENT</p>
         <label
           >Ideally, how much would you like to spend per month on streaming
           services, movies, events, and other entertainment?</label
         >
-        <input placeholder="00.00" />
+        <input type="text" name="entertainmentBudgetAmount" id="entertainmentBudgetAmount" class="" placeholder="00.00" />
+        <input type="submit" value="Add Expense" id="add_expense">
       </form>
     </div>
     <footer>

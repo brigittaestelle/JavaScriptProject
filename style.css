@@ -17,7 +17,8 @@ body {
 }
 .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 #navbarNav {
   justify-content: flex-end;
@@ -108,7 +109,7 @@ footer p:last-child {
   flex-direction: column;
   align-items: center;
   background-color: lightgrey;
-  height: 250px;
+  /* height: 250px; */
   width: 250px;
   border: solid 10px #7f3f98;
   margin: 10px;
