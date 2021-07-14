@@ -1,4 +1,5 @@
 "use strict";
+alert("Welcome to Budgie Budget. Enter in you budget amounts for the categories listed in the Setting section to get started.")
 let frm = document.querySelector("#set_budget");
 
 const getBudgetAmounts = (event) => {

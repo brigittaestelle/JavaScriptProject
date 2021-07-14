@@ -80,20 +80,148 @@
     </header>
     
       <!-- ACCORDION -->
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Accordion Item #1
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Add An Expense
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <!-- START ADD EXPENSES -->
+              <form class="form_style">
+                <h1>ADD AN EXPENSE</h1>
+                <h4 class="input_questions">Where?</h4>
+                <input type="text" placeholder="Target, Walmart, etc.">
+
+                <h4 class="input_questions">What?</h4>
+                <section class="radio_buttons">
+                  <input type="radio" id="input_entertainment" name="input_radio">
+                  <label for="input_entertainment">Entertainment</label>
+                </section>
+                <section class="radio_buttons">
+                  <input type="radio" id="input_food" name="input_radio">
+                  <label for="input_food">Food</label>
+                </section>
+                <section class="radio_buttons">
+                  <input type="radio" id="input_clothing" name="input_radio">
+                  <label for="input_clothing">Clothing</label>
+                </section>
+                <section class="radio_buttons">
+                  <input type="radio" id="input_bills" name="input_radio">
+                  <label for="input_bills">Bills</label>
+                </section>
+                
+
+                <h4 class="input_questions">How much?</h4>
+                <input type="text" placeholder="amount spent here">
+
+                <button class ="add_expense_button"type="submit"> Save</button>
+              </form>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Setting
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <form id="set_budget">
+                  <h1>SETTINGS</h1>
+                  <p>BILLS</p>
+                  <label
+                    >How much do you expect to spend per month on other bills (rent,
+                    housing, utilities, car, phone)?</label
+                  >
+                  <input type="text" name="billsBudgetAmount" id="billsBudgetAmount" class="" placeholder="00.00" />
+                  <p>FOOD</p>
+                  <label
+                    >Ideally, how much would you like to spend per month on food
+                    (restaurants, groceries, eating out)?</label
+                  >
+                  <input type="text" name="foodBudgetAmount" id="foodBudgetAmount" class="" placeholder="00.00" />
+                  <p>CLOTHING</p>
+                  <label
+                    >Ideally, how much would you like to spend per month on clothing and
+                    other necessary items?</label
+                  >
+                  <input type="text" name="clothingBudgetAmount" id="clothingBudgetAmount" class="" placeholder="00.00" />
+                  <p>ENTERTAINMENT</p>
+                  <label
+                    >Ideally, how much would you like to spend per month on streaming
+                    services, movies, events, and other entertainment?</label
+                  >
+                  <input type="text" name="entertainmentBudgetAmount" id="entertainmentBudgetAmount" class="" placeholder="00.00" />
+                  <input type="submit" value="Add Expense" id="add_expense">
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Dashboard
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <section class="boxes">
+                  <h1>Total Budget $<span id="totalBudget">0.00</span></h1>
+                  <div class="FoodSquare">
+                    <p>
+                        <span><i class="fas fa-hamburger"></i></span>
+                        <p>FOOD $<span id="foodBudget">0.00</span></p>
+                        
+                    </p>
+                    <div class="expense_display">
+                      <p>McDonalds</p>
+                      <p>$5.78</p>
+                    </div>
+          
+                  </div>
+                  <div class="FoodSquare">
+                    <p>
+                        <span><i class="fas fa-tshirt"></i></span>
+                        <p>CLOTHING $<span id="clothingBudget">0.00</span></p>
+                    </p>
+                    <div class="expense_display">
+                      <p>Target</p>
+                      <p>$50.33</p>
+                    </div>
+                  </div>
+          
+                  <div class="FoodSquare">
+                    <p>
+                        <span><i class="fas fa-ticket-alt"></i></span>
+                        <p>ENTERTAINMENT $<span id="entertainmentBudget">0.00</span></p>
+                        <div class="expense_display">
+                          <p>AMC Theatre</p>
+                          <p>$23.58</p>
+                        </div>
+                    </p>
+                  </div>
+          
+                  <div class="FoodSquare">
+                    <p class="Bills_style">
+                        <span><i class="fas fa-home"></i></span>
+                        <p>BILLS $<span id="billsBudget">0.00</span></p>
+                        <div class="expense_display">
+                          <p>DTE</p>
+                          <p>$45.85</p>
+                        </div>
+                    </p>
+                  </div>
+                </section>
+              </div>
             </div>
           </div>
         </div>
-    
+
+
     <footer>
       <div class="footer_nav">
         <p><a href="dashboard.html">DASHBOARD</a></p>

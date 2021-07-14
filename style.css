@@ -114,7 +114,11 @@ footer p:last-child {
   border: solid 10px #7f3f98;
   margin: 10px;
 }
-
+.expense_display {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
 .fas {
   font-size: 180px;
 }
