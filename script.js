@@ -39,13 +39,17 @@ const getExpenseAmounts = (e) => {
   console.log(ExpenseLocation);
   const ExpenseType = ExpenseData.get("input_radio");
   console.log(ExpenseType);
-  const ExpenseAmount = new Number(ExpenseData.get("inputAmount"));
+  const ExpenseAmount = Number(ExpenseData.get("inputAmount"));
   console.log(ExpenseAmount);
 
   if (ExpenseType == "food") {
-    document.querySelector("FoodSquare.expense_display").innerText += (
-      <p>unicorns</p>
-    );
+    document.querySelector("#foodExpense").innerHTML += `<div class="new__expense"><p>${ExpenseLocation}</p><p>$${ExpenseAmount.toFixed(2)}</p></div>`
+  } else if (ExpenseType == "clothing") {
+    document.querySelector("#clothingExpense").innerHTML += `<div class="new__expense"><p>${ExpenseLocation}</p><p>$${ExpenseAmount.toFixed(2)}</p></div>`
+  } else if (ExpenseType == "entertainment") {
+    document.querySelector("#entertainmentExpense").innerHTML += `<div class="new__expense"><p>${ExpenseLocation}</p><p>$${ExpenseAmount.toFixed(2)}</p></div>`
+  } else if (ExpenseType == "bills") {
+    document.querySelector("#billsExpense").innerHTML += `<div class="new__expense"><p>${ExpenseLocation}</p><p>$${ExpenseAmount.toFixed(2)}</p></div>`
   }
 };
 
