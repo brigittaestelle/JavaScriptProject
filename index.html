@@ -89,32 +89,32 @@
         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
           <div class="accordion-body">
             <!-- START ADD EXPENSES -->
-          <form class="form_style">
+          <form class="form_style" id="ExpenseForm">
             <h1>ADD AN EXPENSE</h1>
-            <h4 class="input_questions">Where?</h4>
-            <input type="text" placeholder="Target, Walmart, etc.">
+            <label for="WhereInput" class="input_questions">Where?</label>
+            <input type="text" id="WhereInput" name="WhereInput" placeholder="Target, Walmart, etc.">
 
-            <h4 class="input_questions">What?</h4>
+            <label class="input_questions">What?</label>
             <section class="radio_buttons">
-              <input type="radio" id="input_entertainment" name="input_radio">
-              <label for="input_entertainment">Entertainment</label>
+              <input type="radio" id="input_entertainment" name="input_radio" value="entertainment">
+              <label for="input_entertainment" name="entertainment">Entertainment</label>
             </section>
             <section class="radio_buttons">
-              <input type="radio" id="input_food" name="input_radio">
-              <label for="input_food">Food</label>
+              <input type="radio" id="input_food" name="input_radio" value="food">
+              <label for="input_food" name="food">Food</label>
             </section>
             <section class="radio_buttons">
-              <input type="radio" id="input_clothing" name="input_radio">
-              <label for="input_clothing">Clothing</label>
+              <input type="radio" id="input_clothing" name="input_radio" value="clothing">
+              <label for="input_clothing" name="clothing">Clothing</label>
             </section>
             <section class="radio_buttons">
-              <input type="radio" id="input_bills" name="input_radio">
-              <label for="input_bills">Bills</label>
+              <input type="radio" id="input_bills" name="input_radio" value="bills">
+              <label for="input_bills" name="bills">Bills</label>
             </section>
             
 
-            <h4 class="input_questions">How much?</h4>
-            <input type="text" placeholder="amount spent here">
+            <label for="inputAmount" class="input_questions">How much?</label>
+            <input type="text" id="inputAmount" name="inputAmount" placeholder="amount spent here">
 
             <button class ="add_expense_button"type="submit"> Save</button>
           </form>
@@ -124,38 +124,34 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingTwo">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Setting
+            Settings
           </button>
         </h2>
         <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
           <div class="accordion-body"><a name="settings"></a>
             <form id="set_budget">
-              <h1>SETTINGS</h1>
-              <p>BILLS</p>
+              <h1 class="settingheading">SETTINGS</h1>
+              <p class="billsSettingsTitle">BILLS</p>
               <label
-                >How much do you expect to spend per month on other bills (rent,
-                housing, utilities, car, phone)?</label
+                >Set weekly budget amount for bills</label
               >
               <input type="text" name="billsBudgetAmount" id="billsBudgetAmount" class="" placeholder="00.00" />
-              <p>FOOD</p>
+              <p class="foodSettingsTitle">FOOD</p>
               <label
-                >Ideally, how much would you like to spend per month on food
-                (restaurants, groceries, eating out)?</label
+                >Set weekly budget amount for food</label
               >
               <input type="text" name="foodBudgetAmount" id="foodBudgetAmount" class="" placeholder="00.00" />
               <p>CLOTHING</p>
               <label
-                >Ideally, how much would you like to spend per month on clothing and
-                other necessary items?</label
+                >Set weekly budget amount for clothing</label
               >
               <input type="text" name="clothingBudgetAmount" id="clothingBudgetAmount" class="" placeholder="00.00" />
               <p>ENTERTAINMENT</p>
               <label
-                >Ideally, how much would you like to spend per month on streaming
-                services, movies, events, and other entertainment?</label
+                >Set weekly budget amount for entertainment</label
               >
               <input type="text" name="entertainmentBudgetAmount" id="entertainmentBudgetAmount" class="" placeholder="00.00" />
-              <input type="submit" value="Add Expense" id="add_expense">
+              <input type="submit" value="Set Budget" id="add_expense">
             </form>
           </div>
         </div>

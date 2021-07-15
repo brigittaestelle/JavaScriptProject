@@ -24,26 +24,24 @@ body {
   justify-content: flex-end;
 }
 form {
-
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-.input_questions{
-    margin-bottom: 10px !important;
-    margin-top: 20px !important;
+.input_questions {
+  margin-bottom: 10px !important;
+  margin-top: 20px !important;
 }
 .radio_buttons {
-    flex-direction:row;
+  flex-direction: row;
 }
 .add_expense_button {
-    margin-top: 10px;
-    border-radius: 20px;
-    background-color: green;
-    color: white;
+  margin-top: 10px;
+  border-radius: 20px;
+  background-color: green;
+  color: white;
 
   display: flex;
   flex-direction: column;
-
 }
 footer {
   display: flex;
@@ -64,39 +62,38 @@ footer p:last-child {
   justify-content: space-evenly;
 }
 .footer_social {
-
-    display: flex;
-    justify-content: space-evenly;
-}
-.list_purchases {
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-}
-.list_purchases_item {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-.list_purchases_item > p {
-    margin-right: 1em;
-}
-.list_purchases_item > p:last-of-type {
-    margin-right: 0em;
-}
-.list_purchases_total {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-.list_purchases_total p {
-    font-weight: 700;
-    font-size: 1.5em
-}
-
   display: flex;
   justify-content: space-evenly;
 }
+.list_purchases {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+.list_purchases_item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.list_purchases_item > p {
+  margin-right: 1em;
+}
+.list_purchases_item > p:last-of-type {
+  margin-right: 0em;
+}
+.list_purchases_total {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.list_purchases_total p {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+/* display: flex;
+  justify-content: space-evenly;
+} */
 
 .boxes {
   display: flex;
@@ -127,3 +124,31 @@ a {
   color: green !important;
 }
 
+.settingheading {
+  color: purple;
+  margin-bottom: 50px;
+}
+
+#billsBudgetAmount {
+  margin-bottom: 40px;
+}
+
+#foodBudgetAmount {
+  margin-bottom: 40px;
+}
+
+#clothingBudgetAmount {
+  margin-bottom: 40px;
+}
+
+#entertainmentBudgetAmount {
+  margin-bottom: 40px;
+}
+
+.billsSettingsTitle {
+  color: purple;
+}
+
+.foodSettingsTitle {
+  color: purple;
+}
