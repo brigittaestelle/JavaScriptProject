@@ -14,6 +14,25 @@ body {
   position: relative;
   min-height: 100%;
   padding-bottom: 6rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+  color: #222222 !important;
+}
+h1 {
+  font-weight: 700 !important;
+  color: #7F3F98 !important;
+}
+p {
+  margin-bottom: 0 !important;
+  font-weight: 700 !important;
+}
+label {
+  color:#7F3F98 !important;
+}
+.label--bold {
+  font-weight: 700;
+}
+.label--black {
+  color: #222222 !important;
 }
 .container {
   display: flex;
@@ -27,6 +46,32 @@ form {
   display: flex;
   flex-direction: column;
 }
+#set_budget_button {
+  padding: 1em 2.5em;
+  background-color: #7F3F98;
+  color: #ffffff;
+  border: 1px solid #7F3F98;
+  border-radius: 7px;
+  font-weight: 700;
+  font-size: 1.25em;
+}
+#add_expense {
+  padding: 1em 2.5em;
+  background-color: #7F3F98;
+  color: #ffffff;
+  border: 1px solid #7F3F98;
+  border-radius: 7px;
+  font-weight: 700;
+  font-size: 1.25em;
+}
+#set_budget_button:hover {
+  color: #7F3F98;
+  background-color: #ffffff;
+  transition: all .5s ease-in-out;
+}
+#inputAmount {
+  margin-bottom: 20px;
+}
 .input_questions {
   margin-bottom: 10px !important;
   margin-top: 20px !important;
@@ -34,37 +79,8 @@ form {
 .radio_buttons {
   flex-direction: row;
 }
-.add_expense_button {
-  margin-top: 10px;
-  border-radius: 20px;
-  background-color: green;
-  color: white;
 
-  display: flex;
-  flex-direction: column;
-}
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-self: flex-end;
-  background-color: #f8f9fa;
-  padding: 1em;
-}
-footer p {
-  margin-right: 1em;
-}
-footer p:last-child {
-  margin-right: 0;
-}
-.footer_nav {
-  display: flex;
-  justify-content: space-evenly;
-}
-.footer_social {
-  display: flex;
-  justify-content: space-evenly;
-}
+
 .list_purchases {
   display: flex;
   flex-direction: column;
@@ -125,8 +141,7 @@ a {
 }
 
 .settingheading {
-  color: purple;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 #billsBudgetAmount {
@@ -145,13 +160,6 @@ a {
   margin-bottom: 40px;
 }
 
-.billsSettingsTitle {
-  color: purple;
-}
-
-.foodSettingsTitle {
-  color: purple;
-}
 #foodExpense {
   display: flex;
   flex-direction: column;

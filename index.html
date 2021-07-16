@@ -27,9 +27,9 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="#"
             ><img
-              src="images/budgie_budget.png"
+              src="images/budgie_budget@2x.png"
               alt="budgie bird"
-              width="150px"
+              width="250px"
           /></a>
           <button
             class="navbar-toggler"
@@ -91,29 +91,29 @@
             <!-- START ADD EXPENSES -->
           <form class="form_style" id="ExpenseForm">
             <h1>ADD AN EXPENSE</h1>
-            <label for="WhereInput" class="input_questions">Where?</label>
+            <label for="WhereInput" class="input_questions label--bold">Where?</label>
             <input type="text" id="WhereInput" name="WhereInput" placeholder="Target, Walmart, etc.">
 
-            <label class="input_questions">What?</label>
-            <section class="radio_buttons">
-              <input type="radio" id="input_entertainment" name="input_radio" value="entertainment">
-              <label for="input_entertainment" name="entertainment">Entertainment</label>
-            </section>
+            <label class="input_questions label--bold">What?</label>
             <section class="radio_buttons">
               <input type="radio" id="input_food" name="input_radio" value="food">
-              <label for="input_food" name="food">Food</label>
+              <label class="label--black" for="input_food" name="food">Food</label>
             </section>
             <section class="radio_buttons">
               <input type="radio" id="input_clothing" name="input_radio" value="clothing">
-              <label for="input_clothing" name="clothing">Clothing</label>
+              <label class="label--black" for="input_clothing" name="clothing">Clothing</label>
+            </section>
+            <section class="radio_buttons">
+              <input type="radio" id="input_entertainment" name="input_radio" value="entertainment">
+              <label class="label--black" for="input_entertainment" name="entertainment">Entertainment</label>
             </section>
             <section class="radio_buttons">
               <input type="radio" id="input_bills" name="input_radio" value="bills">
-              <label for="input_bills" name="bills">Bills</label>
+              <label class="label--black" for="input_bills" name="bills">Bills</label>
             </section>
             
 
-            <label for="inputAmount" class="input_questions">How much?</label>
+            <label for="inputAmount" class="input_questions label--bold">How much?</label>
             <input type="text" id="inputAmount" name="inputAmount" placeholder="amount spent here">
 
             <button class ="add_expense_button"type="submit" id="add_expense"> Add Expense</button>
@@ -180,7 +180,7 @@
               </div>
               <div class="FoodSquare">
                 <p>
-                    <span><i class="fas fa-tshirt"></i></span>
+                    <span><i id="tshirt_icon" class="fas fa-tshirt"></i></span>
                     <p>CLOTHING $<span id="clothingBudget">0.00</span></p>
                 </p>
                 <div id="clothingExpense" class="expense_display">
@@ -190,7 +190,7 @@
       
               <div class="FoodSquare">
                 <p>
-                    <span><i class="fas fa-ticket-alt"></i></span>
+                    <span><i id="ticket_icon" class="fas fa-ticket-alt"></i></span>
                     <p>ENTERTAINMENT $<span id="entertainmentBudget">0.00</span></p>
                     <div id="entertainmentExpense" class="expense_display">
                       <!--new entries will go here-->
@@ -200,7 +200,7 @@
       
               <div class="FoodSquare">
                 <p class="Bills_style">
-                    <span><i class="fas fa-home"></i></span>
+                    <span><i id="home_icon" class="fas fa-home"></i></span>
                     <p>BILLS $<span id="billsBudget">0.00</span></p>
                     <div id="billsExpense" class="expense_display">
                       <!--new entries will go here-->

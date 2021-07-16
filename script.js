@@ -44,6 +44,7 @@ const getExpenseAmounts = (e) => {
   const ExpenseAmount = Number(ExpenseData.get("inputAmount"));
   console.log(ExpenseAmount);
   var totalSpend;
+
   if (ExpenseType == "food") {
     document.querySelector(
       "#foodExpense"
@@ -65,6 +66,10 @@ const getExpenseAmounts = (e) => {
       updatedAmount - ExpenseAmount;
 
     // change the icon red if updatedAmount > budget
+    if (Number(document.querySelector("#foodBudget").innerText) <= 0) {
+      document.querySelector("#hamburger_icon").style.color = "red"
+    };
+
   } else if (ExpenseType == "clothing") {
     document.querySelector(
       "#clothingExpense"
@@ -82,8 +87,16 @@ const getExpenseAmounts = (e) => {
     let updatedAmount = Number(
       document.querySelector("#clothingBudget").innerText
     );
+
+    
     document.querySelector("#clothingBudget").innerText =
-      updatedAmount - ExpenseAmount;
+    updatedAmount - ExpenseAmount;
+    
+    // change the icon red if updatedAmount > budget
+    if (Number(document.querySelector("#clothingBudget").innerText) <= 0) {
+      document.querySelector("#tshirt_icon").style.color = "red"
+    };
+
   } else if (ExpenseType == "entertainment") {
     document.querySelector(
       "#entertainmentExpense"
@@ -101,8 +114,16 @@ const getExpenseAmounts = (e) => {
     let updatedAmount = Number(
       document.querySelector("#entertainmentBudget").innerText
     );
+
+    
     document.querySelector("#entertainmentBudget").innerText =
-      updatedAmount - ExpenseAmount;
+    updatedAmount - ExpenseAmount;
+    
+    // change the icon red if updatedAmount > budget
+    if (Number(document.querySelector("#entertainmentBudget").innerText) <= 0) {
+      document.querySelector("#ticket_icon").style.color = "red"
+    };
+
   } else if (ExpenseType == "bills") {
     document.querySelector(
       "#billsExpense"
@@ -120,8 +141,15 @@ const getExpenseAmounts = (e) => {
     let updatedAmount = Number(
       document.querySelector("#billsBudget").innerText
     );
+
+    
     document.querySelector("#billsBudget").innerText =
-      updatedAmount - ExpenseAmount;
+    updatedAmount - ExpenseAmount;
+    
+    // change the icon red if updatedAmount > budget
+    if (Number(document.querySelector("#billsBudget").innerText) <= 0) {
+      document.querySelector("#home_icon").style.color = "red"
+    };
   }
 
   // subtract from total budget
