@@ -34,7 +34,6 @@ let exp = document.querySelector("#ExpenseForm");
 
 let spendArray = [];
 
-
 const getExpenseAmounts = (e) => {
   e.preventDefault();
   let ExpenseData = new FormData(exp);
@@ -44,50 +43,97 @@ const getExpenseAmounts = (e) => {
   console.log(ExpenseType);
   const ExpenseAmount = Number(ExpenseData.get("inputAmount"));
   console.log(ExpenseAmount);
-var totalSpend;
+  var totalSpend;
   if (ExpenseType == "food") {
-    document.querySelector("#foodExpense").innerHTML += `<div class="new__expense"><p>${ExpenseLocation}</p><p>$${ExpenseAmount.toFixed(2)}</p></div>`
-    spendArray.push(ExpenseAmount)
-    totalSpend = spendArray.reduce(function(a,b){
+    document.querySelector(
+      "#foodExpense"
+    ).innerHTML += `<div class="new__expense"><p>${ExpenseLocation}</p><p>$${ExpenseAmount.toFixed(
+      2
+    )}</p></div>`;
+    spendArray.push(ExpenseAmount);
+    totalSpend = spendArray.reduce(function (a, b) {
       return a + b;
-    },0);
+    }, 0);
     console.log(spendArray);
     console.log(totalSpend);
+    //update weekly spend
+    document.querySelector("#weeklySpend").innerText = totalSpend;
+
     //update the category budget with the spendAmount
-    let updatedAmount = Number(document.querySelector("#foodBudget").innerText)
-    document.querySelector("#foodBudget").innerText = updatedAmount - ExpenseAmount;
+    let updatedAmount = Number(document.querySelector("#foodBudget").innerText);
+    document.querySelector("#foodBudget").innerText =
+      updatedAmount - ExpenseAmount;
+
+    // change the icon red if updatedAmount > budget
   } else if (ExpenseType == "clothing") {
-    document.querySelector("#clothingExpense").innerHTML += `<div class="new__expense"><p>${ExpenseLocation}</p><p>$${ExpenseAmount.toFixed(2)}</p></div>`
-    spendArray.push(ExpenseAmount)
-    totalSpend = spendArray.reduce(function(a,b){
+    document.querySelector(
+      "#clothingExpense"
+    ).innerHTML += `<div class="new__expense"><p>${ExpenseLocation}</p><p>$${ExpenseAmount.toFixed(
+      2
+    )}</p></div>`;
+    spendArray.push(ExpenseAmount);
+    totalSpend = spendArray.reduce(function (a, b) {
       return a + b;
-    },0);    
-    //update the category budget with the spendAmount
-        let updatedAmount = Number(document.querySelector("#clothingBudget").innerText)
-        document.querySelector("#clothingBudget").innerText = updatedAmount - ExpenseAmount;
-    
+    }, 0);
+    // update weekly spend
+    document.querySelector("#weeklySpend").innerText = totalSpend;
 
+    //update the category budget with the spendAmount
+    let updatedAmount = Number(
+      document.querySelector("#clothingBudget").innerText
+    );
+    document.querySelector("#clothingBudget").innerText =
+      updatedAmount - ExpenseAmount;
   } else if (ExpenseType == "entertainment") {
-    document.querySelector("#entertainmentExpense").innerHTML += `<div class="new__expense"><p>${ExpenseLocation}</p><p>$${ExpenseAmount.toFixed(2)}</p></div>`
-    spendArray.push(ExpenseAmount)
-    totalSpend = spendArray.reduce(function(a,b){
+    document.querySelector(
+      "#entertainmentExpense"
+    ).innerHTML += `<div class="new__expense"><p>${ExpenseLocation}</p><p>$${ExpenseAmount.toFixed(
+      2
+    )}</p></div>`;
+    spendArray.push(ExpenseAmount);
+    totalSpend = spendArray.reduce(function (a, b) {
       return a + b;
-    },0);  
-    //update the category budget with the spendAmount
-      let updatedAmount = Number(document.querySelector("#entertainmentBudget").innerText)
-      document.querySelector("#entertainmentBudget").innerText = updatedAmount - ExpenseAmount;
+    }, 0);
+    // update weekly spend
+    document.querySelector("#weeklySpend").innerText = totalSpend;
 
-  } else if (ExpenseType == "bills") {
-    document.querySelector("#billsExpense").innerHTML += `<div class="new__expense"><p>${ExpenseLocation}</p><p>$${ExpenseAmount.toFixed(2)}</p></div>`
-    spendArray.push(ExpenseAmount)
-    totalSpend = spendArray.reduce(function(a,b){
-      return a + b;
-    },0);
-    
     //update the category budget with the spendAmount
-        let updatedAmount = Number(document.querySelector("#billsBudget").innerText)
-        document.querySelector("#billsBudget").innerText = updatedAmount - ExpenseAmount;
-  
+    let updatedAmount = Number(
+      document.querySelector("#entertainmentBudget").innerText
+    );
+    document.querySelector("#entertainmentBudget").innerText =
+      updatedAmount - ExpenseAmount;
+  } else if (ExpenseType == "bills") {
+    document.querySelector(
+      "#billsExpense"
+    ).innerHTML += `<div class="new__expense"><p>${ExpenseLocation}</p><p>$${ExpenseAmount.toFixed(
+      2
+    )}</p></div>`;
+    spendArray.push(ExpenseAmount);
+    totalSpend = spendArray.reduce(function (a, b) {
+      return a + b;
+    }, 0);
+    // update weekly spend
+    document.querySelector("#weeklySpend").innerText = totalSpend;
+
+    //update the category budget with the spendAmount
+    let updatedAmount = Number(
+      document.querySelector("#billsBudget").innerText
+    );
+    document.querySelector("#billsBudget").innerText =
+      updatedAmount - ExpenseAmount;
+  }
+
+  // subtract from total budget
+
+  if (
+    Number(document.querySelector("#weeklySpend").innerText) >=
+    Number(document.querySelector("#totalBudget").innerText)
+  ) {
+    alert("noway,man!");
+    document.querySelector("#add_expense").disabled = true;
+    document.querySelector("#set_budget_button").disabled = true;
+    document.querySelector(".boxes__headline--red").style.color = "red";
   }
 };
 

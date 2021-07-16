@@ -116,7 +116,7 @@
             <label for="inputAmount" class="input_questions">How much?</label>
             <input type="text" id="inputAmount" name="inputAmount" placeholder="amount spent here">
 
-            <button class ="add_expense_button"type="submit"> Save</button>
+            <button class ="add_expense_button"type="submit" id="add_expense"> Add Expense</button>
           </form>
           </div>
         </div>
@@ -151,7 +151,7 @@
                 >Set weekly budget amount for entertainment</label
               >
               <input type="text" name="entertainmentBudgetAmount" id="entertainmentBudgetAmount" class="" placeholder="00.00" />
-              <input type="submit" value="Set Budget" id="add_expense">
+              <input type="submit" value="Set Budget" id="set_budget_button">
             </form>
           </div>
         </div>
@@ -166,10 +166,10 @@
           <div class="accordion-body"><a name="dashboard"></a>
             <section class="boxes">
               <h1>Total Budget $<span id="totalBudget">0.00</span></h1>
-              <h3>Weekly Spend $<span id="weeklySpend">0.00</span></h3>
+              <h3 class="boxes__headline--red">Weekly Spend $<span id="weeklySpend">0.00</span></h3>
               <div class="FoodSquare">
                 <p>
-                    <span><i class="fas fa-hamburger"></i></span>
+                    <span><i id="hamburger_icon" class="fas fa-hamburger"></i></span>
                     <p>FOOD $<span id="foodBudget">0.00</span></p>
                     
                 </p>
