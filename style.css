@@ -34,7 +34,17 @@ label {
 .label--black {
   color: #222222 !important;
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -125,8 +135,10 @@ form {
   background-color: lightgrey;
   /* height: 250px; */
   width: 250px;
-  border: solid 10px #7f3f98;
+  border: solid 5px #7f3f98;
   margin: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, .25);
 }
 .expense_display {
   display: flex;
