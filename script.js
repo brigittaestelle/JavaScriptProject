@@ -1,7 +1,9 @@
 "use strict";
-alert(
-  "Welcome to Budgie Budget. Enter in you budget amounts for the categories listed in the Setting section to get started."
-);
+let tpCover = document.querySelector(".transparentCover");
+
+tpCover.addEventListener("click", ()=> {
+ tpCover.style.visibility = "hidden";
+})
 let frm = document.querySelector("#set_budget");
 
 const getBudgetAmounts = (event) => {
@@ -158,7 +160,8 @@ const getExpenseAmounts = (e) => {
     Number(document.querySelector("#weeklySpend").innerText) >=
     Number(document.querySelector("#totalBudget").innerText)
   ) {
-    alert("noway,man!");
+    document.documentElement.clientWidth <= 600 ? tpCover.style.backgroundImage = "url(images/budgie-bummer-mobile.png)" : tpCover.style.backgroundImage = "url(images/budgie-bummer.png)";
+    tpCover.style.visibility = "visible";
     document.querySelector("#add_expense").disabled = true;
     document.querySelector("#set_budget_button").disabled = true;
     document.querySelector(".boxes__headline--red").style.color = "red";

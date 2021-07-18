@@ -22,6 +22,9 @@
     />
   </head>
   <body>
+    <div class="transparentCover">
+      <h3 class="closeCover">X</h3>
+    </div>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -79,6 +82,7 @@
       </nav>
     </header>
     <!-- ACCORDION -->
+    <div class="wrapper">
     <div class="accordion" id="accordionExample">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
@@ -116,7 +120,7 @@
             <label for="inputAmount" class="input_questions label--bold">How much?</label>
             <input type="number" id="inputAmount" name="inputAmount" placeholder="amount spent here">
 
-            <button class ="add_expense_button"type="submit" id="add_expense"> Add Expense</button>
+            <button class ="add_expense_button button--purple" type="submit" id="add_expense"> Add Expense</button>
           </form>
           </div>
         </div>
@@ -151,7 +155,7 @@
                 >Set weekly budget amount for entertainment</label
               >
               <input type="number" name="entertainmentBudgetAmount" id="entertainmentBudgetAmount" class="" placeholder="$0.00" />
-              <input type="submit" value="Set Budget" id="set_budget_button">
+              <input type="submit" value="Set Budget" class="button--purple" id="set_budget_button">
             </form>
           </div>
         </div>
@@ -167,51 +171,55 @@
             <section class="boxes">
               <h1>Total Budget $<span id="totalBudget">0.00</span></h1>
               <h3 class="boxes__headline--red">Weekly Spend $<span id="weeklySpend">0.00</span></h3>
-              <div class="FoodSquare">
-                <p>
-                    <span><i id="hamburger_icon" class="fas fa-hamburger"></i></span>
-                    <p>FOOD $<span id="foodBudget">0.00</span></p>
-                    
-                </p>
-                <div id="foodExpense" class="expense_display">
-                  <!--new entries will go here-->
+              <div class="squareContainer">
+                <div class="FoodSquare">
+                  <p>
+                      <span><i id="hamburger_icon" class="fas fa-hamburger"></i></span>
+                      <p>FOOD $<span id="foodBudget">0.00</span></p>
+                      
+                  </p>
+                  <div id="foodExpense" class="expense_display">
+                    <!--new entries will go here-->
+                  </div>
+        
                 </div>
-      
-              </div>
-              <div class="FoodSquare">
-                <p>
-                    <span><i id="tshirt_icon" class="fas fa-tshirt"></i></span>
-                    <p>CLOTHING $<span id="clothingBudget">0.00</span></p>
-                </p>
-                <div id="clothingExpense" class="expense_display">
-                  <!--new entries will go here-->
+                <div class="FoodSquare">
+                  <p>
+                      <span><i id="tshirt_icon" class="fas fa-tshirt"></i></span>
+                      <p>CLOTHING $<span id="clothingBudget">0.00</span></p>
+                  </p>
+                  <div id="clothingExpense" class="expense_display">
+                    <!--new entries will go here-->
+                  </div>
                 </div>
-              </div>
-      
-              <div class="FoodSquare">
-                <p>
-                    <span><i id="ticket_icon" class="fas fa-ticket-alt"></i></span>
-                    <p>ENTERTAINMENT $<span id="entertainmentBudget">0.00</span></p>
-                    <div id="entertainmentExpense" class="expense_display">
-                      <!--new entries will go here-->
-                    </div>
-                </p>
-              </div>
-      
-              <div class="FoodSquare">
-                <p class="Bills_style">
-                    <span><i id="home_icon" class="fas fa-home"></i></span>
-                    <p>BILLS $<span id="billsBudget">0.00</span></p>
-                    <div id="billsExpense" class="expense_display">
-                      <!--new entries will go here-->
-                    </div>
-                </p>
+        
+                <div class="FoodSquare">
+                  <p>
+                      <span><i id="ticket_icon" class="fas fa-ticket-alt"></i></span>
+                      <p>ENTERTAINMENT $<span id="entertainmentBudget">0.00</span></p>
+                      <div id="entertainmentExpense" class="expense_display">
+                        <!--new entries will go here-->
+                      </div>
+                  </p>
+                </div>
+        
+                <div class="FoodSquare">
+                  <p class="Bills_style">
+                      <span><i id="home_icon" class="fas fa-home"></i></span>
+                      <p>BILLS $<span id="billsBudget">0.00</span></p>
+                      <div id="billsExpense" class="expense_display">
+                        <!--new entries will go here-->
+                      </div>
+                  </p>
+                </div>
+                
               </div>
             </section>
           </div>
         </div>
       </div>
     </div>
+  </div>
     <!-- <footer>
       <div class="footer_nav">
         <p><a href="dashboard.html">DASHBOARD</a></p>

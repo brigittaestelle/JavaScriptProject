@@ -17,6 +17,23 @@ body {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
   color: #222222 !important;
 }
+.transparentCover {
+  height: 100%;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .5) url("images/budgie_budget-white-mobile.png") no-repeat center;
+  z-index: 10000;
+
+}
+.closeCover {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  cursor: pointer;
+}
 h1 {
   font-weight: 700 !important;
   color: #7F3F98 !important;
@@ -124,6 +141,8 @@ form {
 
 .boxes {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -140,17 +159,23 @@ form {
   border-radius: 10px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, .25);
 }
+.FoodSquare > p:nth-of-type(1) {
+ padding: 1em 0 0 0;
+}
+section.boxes > h3 {
+  font-weight: 700;
+}
 .expense_display {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
 .fas {
-  font-size: 180px;
+  font-size: 5.5em;
 }
 a {
   text-decoration: none !important;
-  color: green !important;
+  color:#846391!important;
 }
 
 .settingheading {
@@ -182,4 +207,21 @@ a {
   justify-content: space-between;
   width: 100%;
   padding: 0 .5em;
+}
+.button--purple {
+  width: 280px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 600px){
+.squareContainer {
+ display: flex;
+ flex-wrap: wrap;
+}
+.wrapper {
+  width: 600px;
+  margin:0 auto;
+}
+.transparentCover {
+  background-image: url("images/budgie_budget-white.png");
+}
 }
