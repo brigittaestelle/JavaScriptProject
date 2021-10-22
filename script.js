@@ -10,24 +10,22 @@ const getBudgetAmounts = (event) => {
   event.preventDefault();
   let budgetData = new FormData(frm);
   const billAmount = new Number(budgetData.get("billsBudgetAmount"));
-  console.log(billAmount);
   const foodAmount = new Number(budgetData.get("foodBudgetAmount"));
-  console.log(foodAmount);
-  const entertainmentAmount = new Number(
-    budgetData.get("entertainmentBudgetAmount")
-  );
-  console.log(entertainmentAmount);
+  const entertainmentAmount = new Number(budgetData.get("entertainmentBudgetAmount"));
   const clothingAmount = new Number(budgetData.get("clothingBudgetAmount"));
-  console.log(clothingAmount);
-  console.log(billAmount + foodAmount);
+ 
 
   document.querySelector("#billsBudget").innerText = billAmount;
   document.querySelector("#foodBudget").innerText = foodAmount;
-  document.querySelector("#entertainmentBudget").innerText =
-    entertainmentAmount;
+  document.querySelector("#entertainmentBudget").innerText = entertainmentAmount;
   document.querySelector("#clothingBudget").innerText = clothingAmount;
-  document.querySelector("#totalBudget").innerText =
-    billAmount + foodAmount + entertainmentAmount + clothingAmount;
+  document.querySelector("#totalBudget").innerText = billAmount + foodAmount + entertainmentAmount + clothingAmount;
+  
+ frm.reset();
+
+  document.getElementById("collapseTwo").classList.toggle("show");
+  document.getElementById("collapseOne").classList.toggle("show");
+  
 };
 
 frm.addEventListener("submit", getBudgetAmounts);
@@ -166,6 +164,11 @@ const getExpenseAmounts = (e) => {
     document.querySelector("#set_budget_button").disabled = true;
     document.querySelector(".boxes__headline--red").style.color = "red";
   }
+
+  // document.getElementById("WhereInput").value = "";
+  // document.getElementById("inputAmount").value = "";
+  // document.getElementsByName("")
+  exp.reset();
 };
 
 exp.addEventListener("submit", getExpenseAmounts);
