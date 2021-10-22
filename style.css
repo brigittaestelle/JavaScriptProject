@@ -201,6 +201,22 @@ a {
 #foodExpense {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+}
+#clothingExpense {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#entertainmentExpense {
+  display: flex;
+  flex-direction: column;
+    align-items: flex-end;
+}
+#billsExpense {
+  display: flex;
+  flex-direction: column;
+    align-items: flex-end;
 }
 .new__expense {
   display: flex;
